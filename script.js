@@ -60,7 +60,7 @@ class TextScramble {
 // Example
 // ——————————————————————————————————————————————————
 
-const phrases = ["Andrew", "Hannah", "Mycroft", "Fallon"];
+const phrases = ["Andrew", "Hannah", "M", "F"];
 
 const el = document.querySelector(".text");
 const fx = new TextScramble(el);
@@ -68,7 +68,7 @@ const fx = new TextScramble(el);
 let counter = 0;
 const next = () => {
   fx.setText(phrases[counter]).then(() => {
-    setTimeout(next, 800);
+    setTimeout(next, 1600);
   });
   counter = (counter + 1) % phrases.length;
 };
